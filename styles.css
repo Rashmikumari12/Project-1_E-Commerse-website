@@ -1,0 +1,389 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* background-color: #0ae4f7; */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-radius: 20px;
+    
+}
+
+header h1 {
+    text-align: center;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+header .search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+header .search-bar button {
+    padding: 5px 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    padding: 20px;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* marquee-scrolling */
+.marquee{
+    background-color: green;
+    color: whitesmoke ;
+    border: 7px red;
+    border-radius: 100rem;
+  
+}
+
+/* Banner */
+.banner {
+
+    color: #0a0000;
+    background-image: url(https://picsum.photos/200);
+    background-repeat: no-repeat;
+    
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    gap: 50px;
+    
+}
+
+section .image {
+    padding: 0.5px;
+    border-radius: 20px;
+}
+
+
+.img-slider img {
+    height: 720px;
+    width: 1080px;
+    }
+    @keyframes slide {
+    0% {
+    left: 0px;
+    }
+    15% {
+    left: 0px;
+    }
+    20% {
+    left: -1080px;
+    }
+    32% {
+    left: -1080px;
+    }
+    35% {
+    left: -2160px;
+    }
+    47% {
+    left: -2160px;
+    }
+    50% {
+    left: -3240px;
+    }
+    63% {
+    left: -3240px;
+    }
+    66% {
+    left: -4320px;
+    }
+    79% {
+    left: -4320px;
+    }
+    82% {
+    left: -5400px;
+    }
+    100% {
+    left: 0px;
+    }
+    }
+.img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 1080px;
+    height: 720px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+    }
+
+.banner h2 {
+    font-size: 3rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+
+/* Products */
+.products {
+    padding: 2rem 0;
+    text-align: center;
+   background-image: url(https://img.freepik.com/free-vector/abstract-blue-technology-background_23-2149352058.jpg);
+    border-radius: 20px;
+    
+}
+
+.products h2 {
+    margin-bottom: 1rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 200px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.product-item button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-item button:hover {
+    background: #555;
+}
+
+/* Cart */
+.cart {
+    /* padding: 2rem 0; */
+    text-align: center;
+    border-radius: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* background-color: aquamarine; */
+    /* background-image: url(https://picsum.photos/200); */
+}
+
+.cart-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.cart-image{
+    width: 40%;
+    padding: 1rem;
+    position: relative;
+    left: 20px;
+
+}
+
+
+
+/* .iimage{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+} */
+
+#cart-items {
+    list-style: none;
+    padding-left: 60px;
+}
+
+#cart-items li {
+    margin: 0.5rem 0;
+    padding-left: 60px;
+}
+
+
+#checkout {
+    background: #333;
+    color: #fff;
+    border: none ;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 500%;
+  
+    /* height: 50%;
+    width: 50%; */
+    /* position: relative;
+    left: 50%;
+    bottom: 70%; */
+   
+}
+
+
+#checkout:hover {
+    background: #555;
+}
+
+/* About and Contact Sections */
+#about, #contact {
+    padding: 2rem 0;
+    text-align: center;
+    /* background-color: rgb(184, 188, 173); */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+}
+.about-image{
+    width: 30rem;
+    position: relative;
+    right: 20%;
+    
+}
+
+#about-section{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+ 
+}
+
+
+
+
+section.spacing {
+     
+    background-color: aquamarine;
+}
+
+
+/* Order Tracking */
+#order-tracking {
+    padding: 2rem 0;
+    text-align: center;
+    gap: 10px;
+
+}
+
+#order-id {
+    padding: 0.5rem;
+    width: 200px;
+    margin-bottom: 1rem;
+    gap: 50px;
+}
+
+#track-order {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#track-order:hover {
+    background: #555;
+}
+
+#order-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Auth Forms */
+.auth {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.auth form {
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
