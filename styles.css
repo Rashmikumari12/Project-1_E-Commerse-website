@@ -211,21 +211,22 @@ section .image {
 
 /* Cart */
 .cart {
-    /* padding: 2rem 0; */
+    padding: 2rem 0;
     text-align: center;
     border-radius: 20px;
     gap: 20px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
-    /* background-color: aquamarine; */
-    /* background-image: url(https://picsum.photos/200); */
+    background-color: aquamarine;
+    
 }
 
 .cart-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 
@@ -235,7 +236,7 @@ section .image {
     position: relative;
     left: 20px;
 
-}
+} 
 
 
 
@@ -281,10 +282,10 @@ section .image {
 #about, #contact {
     padding: 2rem 0;
     text-align: center;
-    /* background-color: rgb(184, 188, 173); */
+    background-color: rgb(184, 188, 173);
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+   flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     position: relative;
