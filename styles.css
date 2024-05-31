@@ -279,41 +279,45 @@ section .image {
 }
 
 /* About and Contact Sections */
-#about, #contact {
-    padding: 2rem 0;
-    text-align: center;
-    background-color: rgb(184, 188, 173);
-    border-radius: 20px;
+#about{
+
+    background-color: grey;
+    padding: 20px;
     display: flex;
-   flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    position: relative;
-    top: 50%;
+    align-items: center;
+
+  
 }
-.about-image{
+/* .about-image{
     width: 30rem;
     position: relative;
     right: 20%;
     
-}
+} */
 
-#about-section{
+/* #about-section{
     display: flex;
     gap: 50px;
     justify-content: center;
  
-}
+} */
 
 
 
 
-section.spacing {
+/* section.spacing {
      
     background-color: aquamarine;
+} */
+
+#contacts{
+    background-color: rgba(66, 63, 63, 0.774);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-
-
 /* Order Tracking */
 #order-tracking {
     padding: 2rem 0;
