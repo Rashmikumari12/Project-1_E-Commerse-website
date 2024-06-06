@@ -1,5 +1,3 @@
-
-
 window.onload = function () {
     const firebaseConfig = {
       apiKey: "AIzaSyBQdK0d0EAKjXFTEUvqFeQJeKLQYeAYzYI",
@@ -97,7 +95,7 @@ window.onload = function () {
           y.style.opacity = 1;
       }
   
-  
+  // before login page
 
 document.addEventListener('DOMContentLoaded', () => {
     const cart = [];
@@ -172,5 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
 //         // Simulate a registration process
 //         alert('Registration successful!');
 //     });
-// 
+
+//
+const close = document.querySelector(".close");
+const open = document.querySelector(".ham");
+const menu = document.querySelector(".menu");
+close.addEventListener("click", () => {
+menu.style.visibility = "hidden";
+});
+open.addEventListener("click", () => {
+menu.style.visibility = "visible";
+});
+
 });
