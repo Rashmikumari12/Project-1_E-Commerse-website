@@ -12,6 +12,8 @@ body {
     /* background-color: #0ae4f7; */
 }
 
+
+
 /* Container */
 
 /* marquee-scrolling */
@@ -51,6 +53,15 @@ header h1{
 
 .search-bar{
     padding: 10px;
+    display: flex;
+    gap: 20px;
+ }
+
+ .checklogin{
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
  }
 
 /* Banner */
