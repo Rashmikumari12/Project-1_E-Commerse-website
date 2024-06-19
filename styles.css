@@ -12,8 +12,6 @@ body {
     /* background-color: #0ae4f7; */
 }
 
-
-
 /* Container */
 
 /* marquee-scrolling */
@@ -53,9 +51,8 @@ header h1{
 
 .search-bar{
     padding: 10px;
-    display: flex;
-    gap: 20px;
  }
+
 
  .checklogin{
     color: red;
@@ -68,8 +65,7 @@ header h1{
 .banner {
 
     color: #0a0000;
-    background-image: url(https://picsum.photos/200);
-    background-repeat: no-repeat;
+ 
     
    
     display: flex;
@@ -81,15 +77,32 @@ header h1{
     
 }
 
+.oneside{
+    /* background-image: url(https://picsum.photos/200); */
+    background-repeat: no-repeat;
+    
+}
 section .image {
     padding: 0.5px;
     border-radius: 20px;
 }
+/* slider image */
 
+.img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    /* width: 1080px; */
+    height: 650px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+    }
 
 .img-slider img {
-    height: 720px;
-    width: 1080px;
+    height: 500px;
+    /* width: 1080px; */
     }
     @keyframes slide {
     0% {
@@ -129,17 +142,6 @@ section .image {
     left: 0px;
     }
     }
-.img-slider {
-    display: flex;
-    float: left;
-    position: relative;
-    width: 1080px;
-    height: 720px;
-    animation-name: slide;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    transition-duration: 2s;
-    }
 
 .banner h2 {
     font-size: 3rem;
@@ -160,7 +162,7 @@ section .image {
 .products {
     padding: 2rem 0;
     text-align: center;
-   background-image: url(https://img.freepik.com/free-vector/abstract-blue-technology-background_23-2149352058.jpg);
+   /* background-image: url(https://img.freepik.com/free-vector/abstract-blue-technology-background_23-2149352058.jpg); */
     border-radius: 20px;
     
 }

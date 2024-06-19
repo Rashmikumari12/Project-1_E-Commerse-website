@@ -4,19 +4,16 @@
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
- 
-    apiKey: "AIzaSyBQdK0d0EAKjXFTEUvqFeQJeKLQYeAYzYI",
+
+     apiKey: "AIzaSyBQdK0d0EAKjXFTEUvqFeQJeKLQYeAYzYI",
     authDomain: "e-tech-68f64.firebaseapp.com",
     databaseURL: "https://e-tech-68f64-default-rtdb.firebaseio.com",
     projectId: "e-tech-68f64",
     storageBucket: "e-tech-68f64.appspot.com",
     messagingSenderId: "27323460686",
     appId: "1:27323460686:web:b9ce724c29786e01a9271f"
-  
-
-
+ //YOUR COPIED FIREBASE PART SHOULD BE HERE
+ //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
  };
 
  // Initialize Firebase
@@ -55,8 +52,6 @@
         setDoc(docRef,userData)
         .then(()=>{
             window.location.href='index.html';
-      
-
         })
         .catch((error)=>{
             console.error("error writing document", error);
@@ -86,9 +81,7 @@
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
-        // window.location.href='homepage.html';
         window.location.href='web.html';
-
     })
     .catch((error)=>{
         const errorCode=error.code;

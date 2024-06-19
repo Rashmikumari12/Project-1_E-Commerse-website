@@ -7,8 +7,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <script type="module" src="./homepage.js"></script>
+    <link rel="stylesheet" href="styles.css">  
 </head>
 <body>
     <header>
@@ -19,16 +19,16 @@
                     <li><a href="web.html">Home</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="aboutus.html">About</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-                    <!-- <li><button id="signInButton" onclick="googleSignIn()">Sign in with Google</button></li>                      
-                    <p id="userDetails"></p> -->
+                    <!-- <li><button id="signInButton" onclick="googleSignIn()">Sign in with Google</button></li>                       -->
+                    <li><a href="#footer">Contact</a></li>
+                    <!-- <p id="userDetails"></p> -->
+                    <li><a href="index.html">Login</a></li>
 
+                    <!-- <div>First Name: <span id="loggedUser"></span></div> -->
                     <!-- Sign-out button -->
                     <!-- <li><button onclick="signOut()">Sign out</button></li> -->
-                    <li> </span> <a  href="index.html">Login</a></li>
-
-              
                       
                 </ul>
             </nav>
@@ -36,27 +36,31 @@
                 <input type="text" placeholder="Search...">
                 <button>Search</button>
         </div>
+
         <div class="checklogin">
-            <div>Hello <span id="loggedUserFName"></span></div>
+            <div>Hello <span id="loggedUser"></span></div>
             <!-- <div>Last Name: <span id="loggedUserLName"></span></div>
             <div>Email: <span id="loggedUserEmail"></span></div> -->
             <button id="logout">Logout</button>
 
-        </div>
+
     </header>
         <div class="marquee">
             <marquee behavior="" direction="">Welcome! to our website. Have a woderful shopping experince</marquee>
         </div>
 
-
+<!-- banner page -->
 
     <section id="home" class="banner">
         <div class="image">
             <img src="https://ssatakam.com/wp-content/uploads/2016/06/about.jpg" alt="">
         </div>
         <div class="container">
+            <div class="oneside">
             <h2>Welcome to Our Shop</h2>
             <p>Find the best products here.</p>
+            
+        </div>
         </div>
     </section>
     <!-- SLIDING SECTION -->
@@ -76,34 +80,83 @@
             <h2>Shop</h2>
             <div class="product-grid">
                 <div class="product-item" data-id="1" data-name="Power bank" data-price="2,000">
-                    <img src="product1.jpg" alt="Product 1">
+                    <img src="product1.jpg" alt="powerbank">
                     <h3>Power bank</h3>
                     <p>₹2,000</p>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item" data-id="2" data-name="PS V" data-price="50,000">
-                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202404/ps5-pro-175616617-1x1.png?VersionId=y6aedXv9PlmykEy9f0_E6BTjW77_gwZ9" alt="Product 2">
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202404/ps5-pro-175616617-1x1.png?VersionId=y6aedXv9PlmykEy9f0_E6BTjW77_gwZ9" alt="PS V">
                     <h3>PS V</h3>
                     <p>₹50,000</p>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
-            </div>
-            <div class="product-item" data-id="2" data-name="Vr headset" data-price="48,000">
-                <img src="https://m.media-amazon.com/images/I/61GhF+JUXGL._AC_UF1000,1000_QL80_.jpg" alt="Product 2">
-                <h3>Vr headset</h3>
-                <p>₹48,000</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="product-item" data-id="2" data-name="Spy camera" data-price="393">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/295844207/PF/TX/GD/159362105/718wfgcdxpl-sl1500-.jpg" alt="Product 2">
-                <h3>Spy camera</h3>
-                <p>₹393</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
+           
+                <div class="product-item" data-id="2" data-name="Vr headset" data-price="48,000">
+                    <img src="https://m.media-amazon.com/images/I/61GhF+JUXGL._AC_UF1000,1000_QL80_.jpg" alt="Vr headset">
+                    <h3>Vr headset</h3>
+                    <p>₹48,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Spy camera" data-price="393">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/295844207/PF/TX/GD/159362105/718wfgcdxpl-sl1500-.jpg" alt="Spy camera">
+                    <h3>Spy camera</h3>
+                    <p>₹393</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+<!-- to be edited -->
+                <div class="product-item" data-id="2" data-name="Arduino" data-price="500">
+                    <img src="https://cdn-learn.adafruit.com/assets/assets/000/003/199/medium800/learn_arduino_arduinounotop.jpg?1396793561" alt="Arduino">
+                    <h3>Arduino</h3>
+                    <p>₹500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Mac book" data-price="200000">
+                    <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/06/Best-MacBook-1.jpg" alt="Mac book">
+                    <h3>Mac book</h3>
+                    <p>₹200000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Samsung phone" data-price="150000">
+                    <img src="https://fdn.gsmarena.com/imgroot/static/headers/makers/samsung-2024-1.jpg" alt="Samsung phone">
+                    <h3>Samsung phone</h3>
+                    <p>₹150000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Motorola foldable" data-price="175000">
+                    <img src="https://images.deccanherald.com/deccanherald%2F2023-10%2F9ddb0090-d4a3-4226-90aa-3aecba9a2577%2FMotorola_Concept_phone_with_adaptive_flexible_display.jpg" alt="Motorola foldable">
+                    <h3>Motorola foldable</h3>
+                    <p>₹175000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Camera chip" data-price="6,002">
+                    <img src="https://m.media-amazon.com/images/I/71r6T8HfGwL._AC_UF894,1000_QL80_.jpg" alt="Camera chip">
+                    <h3>Camera chip</h3>
+                    <p>₹6,002</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Ram 8GB " data-price="2000">
+                    <img src="https://cdn.mos.cms.futurecdn.net/9twponbr77yscAZd5Q2VMT.jpg" alt="Ram 8GB">
+                    <h3>Ram 8GB </h3>
+                    <p>₹2000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Led Pd USB cable" data-price="400">
+                    <img src="https://m.media-amazon.com/images/I/81DZ3enYnNL._AC_UF1000,1000_QL80_.jpg" alt="Led Pd USB cable
+                    Led Pd USB cable">
+                    <h3>Led Pd USB cable</h3>
+                    <p>₹400</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="Mini Ac" data-price="1700">
+                    <img src="https://m.media-amazon.com/images/I/71YcGrg3eqL.jpg" alt="Mini Ac
+                    Mini Ac">
+                    <h3>Mini Ac</h3>
+                    <p>₹1700</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
             
-                <!-- Add more products as needed
-                 -->
-            </div>
         </div>
     </section>
 
