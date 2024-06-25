@@ -67,14 +67,19 @@ const firebaseConfig = {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // User is signed in
+
+
+
       document.getElementById("signInButton").style.display = "none";  
       document.getElementById("loggedUser"). textContent = user.email;     
-      window.location.href='homepage.html';
+      window.location.href='index.html';
         
       // this line will diplay the username and direct to the page you want just edit the userDetail thing
      
     } else {
       // User is signed out
+
+
       document.getElementById("signInButton").style.display = "block";
       document.getElementById("userDetails").textContent = "";
     }

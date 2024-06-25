@@ -94,8 +94,10 @@ window.onload = function () {
           x.style.opacity = 0;
           y.style.opacity = 1;
       }
-  
-  // before login page
+  // below will the alag add to cart from diff.page
+
+
+//   // before login page
 
 document.addEventListener('DOMContentLoaded', () => {
     const cart = [];

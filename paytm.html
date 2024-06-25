@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytm Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".generate_qr").click(function() {
+                $(".form").hide();
+                $(".qr_code").show();
+                var num = $(".number").val();
+                var amount = localStorage.getItem('totalAmount');  // Get the total amount from localStorage
+                var link = "upi://pay?pa=9079672366@ptsbi&am=" + amount + "&tn=" + num;
+
+                var upi = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(link);
+                console.log(upi);
+                $(".get_qr").attr("src", upi);
+            });
+
+            $(".download_now").click(function() {
+                var name = $(".name").val();
+                var num = $(".number").val();
+                var email = $(".email").val();
+                var id = $(".id").val();
+                if (num != "" && name != "" && email != "" && id != "") {
+                    // Handle the download functionality if needed
+                } else {
+                    alert("Fill all fields correctly");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <h1>Paytm Payment</h1>
+        <div class="form">
+            <div class="flex m20">
+                <label>Full Name*</label>
+                <input type="text" name="name" placeholder="Full Name" class="m10 name">
+            </div>
+            <div class="flex m20">
+                <label>Whatsapp Number(With ISD)*</label>
+                <input type="text" name="phone" placeholder="Ex- +919064973840" class="m10 number">
+            </div>
+            <div class="flex m20">
+                <label>Email*</label>
+                <input type="email" name="email" placeholder="Email" class="m10 email">
+            </div>
+            <input type="hidden" class="total_amount" value="0"> <!-- Hidden field for total amount -->
+            <div class="flex m20">
+                <button class="generate_qr">NEXT</button>
+            </div>
+        </div>
+        <div class="qr_code m20" style="display:none;">
+            <p>Scan the QR Code with any UPI App and pay the amount then download the source code.</p>
+            <center><img src="" alt="QR CODE" class="get_qr m10"></center>
+            <center><img src="https://www.yourtechstory.com/wp-content/uploads/2020/11/need-to-know-how-to-change-the-upi-pin-on-phone-through-payment-apps-like-googlepay-phonepe-and-paytm-here-is-the-step-by-step-method-1024x561.jpg" class="im m10"></center>
+            <div class="flex m20">
+                <label>UTR/REFERENCE/TRANSACTION ID**</label>
+                <input type="number" name="email" placeholder="UTR/REFERENCE/TRANSACTION ID**" class="m10 id">
+            </div>
+            <a class="download_now m20" href="index.html">Back to home</a>
+            <!-- <button class="download_now m20">Download Now</button> -->
+        </div>
+    </section>
+</body>
+</html>

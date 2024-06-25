@@ -3,91 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register & Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>E-commerce Website</title>    
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
-    <script type="module" src="firebaseauth.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="homepage.js"></script>
+    <link rel="stylesheet" href="styles.css">  
 </head>
 <body>
-
-              <!-- registration page -->
-    <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Register</h1>
-      <form method="post" action="">
-        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
-        <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input type="text"  id="fName" placeholder="First Name" required>
-           <label for="fname">First Name</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text"  id="lName" placeholder="Last Name" required>
-            <label for="lName">Last Name</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email"  id="rEmail" placeholder="Email" required>
-            <label for="rEmail">Email</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="rPassword"  placeholder="Password" required>
-            <label for="rPassword">Password</label>
-        </div>
-       <button class="btn" id="submitSignUp" >Sign Up</button>
-      </form>
-      <p class="or">
-        ----------or--------
-      </p>
-      <div class="icons">
-        <i class="fab fa-google"></i>
-        <i class="fab fa-facebook"></i>
-      </div>
-      <div class="links">
-        <p>Already Have Account ?</p>
-        <button id="signInButton">Sign In</button>
-      </div>
-    </div>
-                  <!-- SINGN IN /  LOGIN PAGE  -->
-  <div class="container" id="signIn">
-        <h1 class="form-title">Sign In</h1>
-        <form method="post" action="">
-          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
-
-          <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="email"  id="email" placeholder="Email" required>
-              <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-              <i class="fas fa-lock"></i>
-            <input type="password" id="password"  placeholder="Password" required>
-              <label for="password">Password</label>
-          </div>
-          <p class="recover">
-            <a href="#">Recover Password</a>
-          </p>
-         <button  class="btn"  id="submitSignIn">Sign In</button>
-        </form>
-        <p class="or">
-          ----------or--------
-        </p>
+    <header>
         
-        <!-- <button id="signup" onclick="googleSignIn()"><i  class="fab fa-google" ></i></button> -->
-        <!-- <button id="signInButton" onclick="googleSignIn()">Sign in with Google</button> -->
-        <div class="icons">
-          <i  class="fab fa-google" ></i>
-          <i class="fab fa-facebook"></i>
+        <div class="hcontainer">
+           <a href="index.html"> <img class="logo" src="logo.jpeg" alt=""></a>
+            <h1>E-Tech</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li> -->
+                    <li><a href="#cart">Cart </a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a id="loginButton" href="web.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <div class="checklogin">
+                <div>Hello <span id="loggedUser"></span></div>
+                <button id="logout">Logout</button>
+            </div>
         </div>
-        <div class="links">
-          <p>Don't have account yet?</p>
-          <button id="signUpButton">Sign Up</button>
+    </header>
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">Welcome! to our website. Have a wonderful shopping experience</marquee>
+    </div>
+    
+<!-- banner page -->
+
+    <section id="home" class="banner">
+        <div class="image">
+            <img src="https://ssatakam.com/wp-content/uploads/2016/06/about.jpg" alt="Banner Image">
         </div>
-      </div>
-      <script src="scripts.js"></script>
+        <div class="bcontainer">
+            <h2 class="ban">Welcome to Our Shop</h2>
+            <p>Find the best products here.</p>
+        </div>
+    </section>
+
+    <!-- SLIDING SECTION -->
+    <!-- <div class="section">
+        <div class="section1">
+        <div class="img-slider">
+        <img src="https://t3.ftcdn.net/jpg/05/82/73/42/360_F_582734211_7lS6tKFtOpFRPxvUIvNAJYiARlsjC2DY.jpg" alt="" class="img">
+        <img src="https://img.freepik.com/free-photo/person-using-ar-technology-perform-their-occupation_23-2151137492.jpg?t=st=1716911396~exp=1716914996~hmac=1a00a9b030d1e1401445ee72a39c2c28d606a3dbad160fa2dc76c4d20869d577&w=826" alt="" class="img">
+        <img src="https://img.freepik.com/free-photo/chef-using-ar-technology-his-profession_23-2151137469.jpg?t=st=1716911566~exp=1716915166~hmac=561a823d923288f1e8ace8cdbbd9ae3d7eb99122acc5afb9ada1904224b00372&w=826" alt="" class="img">
+        <img src="https://www.mercedes-benz.com/content/dam/brandhub/assets/innovation/concept-cars/vision-avtr/09-mercedes-benz-vehicles-concept-cars-vision-avtr-2560x1440.cbv20230517105345.jpg/_jcr_content/renditions/mq7-original-aspect.jpeg" alt="" class="img">
+        <img src="https://media.graphassets.com/tiK1GHnSRKyFNRkajBHd" alt="" class="img">
+        </div> -->
+
+        <!-- product details -->
+    <section id="shop" class="products">
+        <div class="container">
+            <h2>Shop</h2>
+            <div class="product-grid">
+                <div class="product-item" data-id="1" data-name="Power bank" data-price="2,000">
+                    <img src="product1.jpg" alt="powerbank">
+                    <h3>Power bank</h3>
+                    <p>₹2,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2" data-name="PS V" data-price="50,000">
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202404/ps5-pro-175616617-1x1.png?VersionId=y6aedXv9PlmykEy9f0_E6BTjW77_gwZ9" alt="PS V">
+                    <h3>PS V</h3>
+                    <p>₹50,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+           
+                <div class="product-item" data-id="3" data-name="Vr headset" data-price="48,000">
+                    <img src="https://m.media-amazon.com/images/I/61GhF+JUXGL._AC_UF1000,1000_QL80_.jpg" alt="Vr headset">
+                    <h3>Vr headset</h3>
+                    <p>₹48,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="4" data-name="Spy camera" data-price="393">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/295844207/PF/TX/GD/159362105/718wfgcdxpl-sl1500-.jpg" alt="Spy camera">
+                    <h3>Spy camera</h3>
+                    <p>₹393</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+<!-- to be edited -->
+                <div class="product-item" data-id="5" data-name="Arduino" data-price="500">
+                    <img src="https://cdn-learn.adafruit.com/assets/assets/000/003/199/medium800/learn_arduino_arduinounotop.jpg?1396793561" alt="Arduino">
+                    <h3>Arduino</h3>
+                    <p>₹500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="6" data-name="Mac book" data-price="200000">
+                    <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/06/Best-MacBook-1.jpg" alt="Mac book">
+                    <h3>Mac book</h3>
+                    <p>₹200000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="7" data-name="Samsung phone" data-price="150000">
+                    <img src="https://fdn.gsmarena.com/imgroot/static/headers/makers/samsung-2024-1.jpg" alt="Samsung phone">
+                    <h3>Samsung phone</h3>
+                    <p>₹150000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="8" data-name="Motorola foldable" data-price="175000">
+                    <img src="https://images.deccanherald.com/deccanherald%2F2023-10%2F9ddb0090-d4a3-4226-90aa-3aecba9a2577%2FMotorola_Concept_phone_with_adaptive_flexible_display.jpg" alt="Motorola foldable">
+                    <h3>Motorola foldable</h3>
+                    <p>₹175000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="9" data-name="Camera chip" data-price="6,002">
+                    <img src="https://m.media-amazon.com/images/I/71r6T8HfGwL._AC_UF894,1000_QL80_.jpg" alt="Camera chip">
+                    <h3>Camera chip</h3>
+                    <p>₹6,002</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="10" data-name="Ram 8GB " data-price="2000">
+                    <img src="https://cdn.mos.cms.futurecdn.net/9twponbr77yscAZd5Q2VMT.jpg" alt="Ram 8GB">
+                    <h3>Ram 8GB </h3>
+                    <p>₹2000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="11" data-name="Led Pd USB cable" data-price="400">
+                    <img src="https://m.media-amazon.com/images/I/81DZ3enYnNL._AC_UF1000,1000_QL80_.jpg" alt="Led Pd USB cable
+                    Led Pd USB cable">
+                    <h3>Led Pd USB cable</h3>
+                    <p>₹400</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="12" data-name="Mini Ac" data-price="1700">
+                    <img src="https://m.media-amazon.com/images/I/71YcGrg3eqL.jpg" alt="Mini Ac">
+                    <h3>Mini Ac</h3>
+                    <p>₹1700</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="13" data-name="Vivo Flying camera phone" data-price="199999">
+                    <img src="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/04/Vivo-drone-camera-phone.jpg?fit=1200%2C800&ssl=1" alt="Vivo Flying camera phone">
+                    <h3>Vivo Flying camera phone</h3>
+                    <p>₹199999</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="14" data-name="Nokia Projector Phone" data-price="177777">
+                    <img src="https://cdn.mos.cms.futurecdn.net/GCDR2vYs5S4WDD5Mzs6JSL-320-80.png" alt="Nokia Projector Phone">
+                    <h3>Nokia Projector Phone</h3>
+                    <p>₹177777</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="15" data-name="Ring phone" data-price="150000">
+                    <img src="https://assets.hongkiat.com/uploads/futuristic-phones/fluid_flexible_concept.jpg" alt="Ring phone">
+                    <h3>Ring phone</h3>
+                    <p>₹150000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>            
+            
+        </div>        
+    </section>
+
+    
+    <section id="cart" class="cart">
+        <div class="cart-container">
+            <!-- <img class="cart-image" src="https://www.milesweb.in/blog/wp-content/uploads/2015/06/ecommerce-stores-hosted-vs-licensed-shopping-cart-solutions-min-1.jpg" alt="shopping cart image"> -->
+         
+            <ul id="cart-items"></ul>
+            <section class="cart">
+                <h2>Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will be appended here -->
+                </ul>
+                <p>Total: ₹<span id="cart-total">0</span></p>
+            </section>
+
+            <div class="payment_div">
+                <a class="payment_stripe" href="paytm.html">Proceed to checkout</a>
+
+                <!-- <a class="payment_stripe" href="https://buy.stripe.com/test_6oE3eCfrA60h6SAfZ0">Proceed to checkout</a> -->
+            </div>
+    </section>
+
+
+    <section id="order-tracking">
+        <div class="about-container">
+            <h2>Order Tracking</h2>
+            <input type="text" id="order-id" placeholder="Enter your order ID">
+            <button id="track-order">Track Order</button>
+            <p id="order-status"></p>
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div id="footer" class="footer0">
+        <h1>E-TECH</h1>
+        </div>
+        <div class="footer1 ">
+            Connect with us at
+        <div class="social-media">
+            <a href="https://www.facebook.com/">
+            <ion-icon name="logo-facebook"></ion-icon>
+            </a>    
+            <a href="https://in.linkedin.com/">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/">
+            <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en">
+            <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://x.com/?lang=en">
+            <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            </div>
+        </div>
+        <div class="footer2">
+        <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+        
+        </div>
+        <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+        </div>
+        <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+        </div>
+        <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        </div>
+        </div>
+        <div class="footer3">Made with &hearts; <h4>from Akash</h4> 2024-2025</div>
+        </footer>
+    
+
+    <!-- <script src="script.js"></script> -->
+    <script src="newscript.js"></script>
 </body>
 </html>
